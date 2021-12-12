@@ -1,6 +1,18 @@
+from PIL import Image
 import streamlit as st
-from visualize import plotSurface
-from DecisionTree import predictor
+from sklearn import preprocessing
+from data import getDataSetOrigin, dataPreprocessing, inputData
+from visualize import decisionTreeViz,svg_write,plotSurface
+import joblib
+import base64
+from DecisionTree import dt_param_selector,predictor
+from sklearn.metrics import (
+    accuracy_score,
+    f1_score,
+    confusion_matrix,
+    classification_report,
+)
+
 
 def md_contents():
     collapse_content = """
@@ -20,6 +32,7 @@ def md_contents():
     st.markdown(collapse_content, unsafe_allow_html=True)
 
 def body():    
+    md_contents()
     predictor()
     st.markdown("---")
     st.write("Source Code")
@@ -40,7 +53,3 @@ def body():
         # svg = viz.svg()
         # svg_write(svg)
         ps=plotSurface()
-
-if __name__ == '__main__':
-    md_contents()
-    body()

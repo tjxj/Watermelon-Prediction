@@ -1,6 +1,11 @@
+from PIL import Image
 import streamlit as st
 from visualize import plotSurface
+import joblib
+import base64
 from DecisionTree import predictor
+
+
 
 def md_contents():
     collapse_content = """

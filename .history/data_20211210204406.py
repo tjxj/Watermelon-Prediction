@@ -52,7 +52,6 @@ def dataPreprocessing():
 
 
 def inputData():
-    st.sidebar.subheader("请选择西瓜外观:sunglasses:")
     color = st.sidebar.selectbox("色泽", ("青绿", "乌黑", "浅白"))
     root = st.sidebar.selectbox("根蒂", ("蜷缩", "稍蜷", "硬挺"))
     knocks = st.sidebar.selectbox("敲击", ("浊响", "沉闷", "清脆"))

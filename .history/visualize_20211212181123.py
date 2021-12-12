@@ -16,7 +16,7 @@ from sklearn.tree import DecisionTreeClassifier
 import streamlit as st
 
 def decisionTreeViz(clf):
-    df = dataPreprocessing()   
+    df = dataPreprocessing()
     X, y = df[df.columns[:-1]], df["label"]
     viz = dtreeviz(
         clf,
@@ -47,7 +47,6 @@ def svg_write(svg, center=True):
 
     # Write the HTML
     st.write(html, unsafe_allow_html=True, width=800, caption="决策树")
-
 def plotSurface():
     st.set_option('deprecation.showPyplotGlobalUse', False)
     # Parameters

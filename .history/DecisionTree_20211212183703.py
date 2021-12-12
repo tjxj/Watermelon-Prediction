@@ -1,8 +1,6 @@
 import streamlit as st
 from sklearn.tree import DecisionTreeClassifier
-from  data import dataPreprocessing,inputData
-import base64
-from PIL import Image
+from  data import dataPreprocessing
 
 def dt_param_selector():
     st.sidebar.subheader("请选择模型参数:sunglasses:")

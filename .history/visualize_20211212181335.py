@@ -16,7 +16,7 @@ from sklearn.tree import DecisionTreeClassifier
 import streamlit as st
 
 def decisionTreeViz(clf):
-    df = dataPreprocessing()   
+    df = dataPreprocessing()
     X, y = df[df.columns[:-1]], df["label"]
     viz = dtreeviz(
         clf,
