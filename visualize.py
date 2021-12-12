@@ -95,9 +95,9 @@ def plotSurface():
                 edgecolor="black",
                 s=15,
             )
-    plt.suptitle("Decision surface of a decision tree using paired features")
-    plt.legend(loc="lower right", borderpad=0, handletextpad=0)
-    plt.axis("tight")
-    # plt.show()
-    plt.tight_layout()
-    st.pyplot()
+    # plt.suptitle("Decision surface of a decision tree using paired features")
+    # plt.legend(loc="lower right", borderpad=0, handletextpad=0)
+    # plt.axis("tight")
+    # # plt.show()
+    # plt.tight_layout()
+    # st.pyplot()

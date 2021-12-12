@@ -36,13 +36,14 @@ def predictor():
         st.image(goodwatermelon,width=705)
         st.markdown("<center>🍉🍉🍉这瓜甚甜，买一个🍉🍉🍉</center>", unsafe_allow_html=True)
     else:
-        file_ = open("./pics/bad.gif", "rb")
+        file_ = open("./pics/bad2.gif", "rb")
         contents = file_.read()
         data_url = base64.b64encode(contents).decode("utf-8")
         file_.close()
 
         st.markdown(
-            f'<img src="data:image/gif;base64,{data_url}" width="705">',
+            f'<img src="data:image/gif;base64,{data_url}" width="70%">',
             unsafe_allow_html=True,
         )
         st.markdown('<center>🔪🔪🔪这瓜不甜，买不得🔪🔪🔪</center>', unsafe_allow_html=True)
+    return y_pred,model
