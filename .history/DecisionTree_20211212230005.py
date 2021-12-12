@@ -33,7 +33,7 @@ def predictor():
     y_pred = model.predict(df_input)
     if y_pred == 1:
         goodwatermelon = Image.open("./pics/good.png")
-        st.image(goodwatermelon,width=705,use_column_width= True)
+        st.image(goodwatermelon,width=705,use_column_width= Ture)
         st.markdown("<center>🍉🍉🍉这瓜甚甜，买一个🍉🍉🍉</center>", unsafe_allow_html=True)
     else:
         file_ = open("./pics/bad2.gif", "rb")
