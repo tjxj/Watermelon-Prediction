@@ -30,9 +30,9 @@ plot_step = 0.02
 
 # Load data
 df = dataPreprocessing()
-plt.figure(figsize=(8,4))
-for pairidx, pair in enumerate([[1, 0], [1, 3], [1, 4], [1, 5],
- [3, 0], [3, 2], [3, 4], [3, 5]]):
+
+for pairidx, pair in enumerate([[0, 1], [0, 2], [0, 3], [0, 4],[0,5],
+ [1, 2], [1, 3], [2, 3], [3, 4],[4,5]]):
     # We only take the two corresponding features
     X, y = df[df.columns[:-1]].values[:, pair], df["label"]
 
@@ -40,8 +40,8 @@ for pairidx, pair in enumerate([[1, 0], [1, 3], [1, 4], [1, 5],
     clf = DecisionTreeClassifier().fit(X, y)
 
     # Plot the decision boundary
-    fig=plt.subplot(2, 4, pairidx + 1)
-    
+    fig=plt.subplot(2, 5, pairidx + 1)
+
     x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
     y_min, y_max = X[:, 1].min() - 1, X[:, 1].max() + 1
     xx, yy = np.meshgrid(
@@ -75,7 +75,7 @@ plt.axis("tight")
 plt.tight_layout()
 st.pyplot()
 
-st.image("./pics/bad.gif") 
+
 # sio = BytesIO()
 # plt.savefig(sio, format='png', bbox_inches='tight', pad_inches=0.0)
 # data = base64.encodebytes(sio.getvalue()).decode()

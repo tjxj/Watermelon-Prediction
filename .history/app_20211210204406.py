@@ -70,7 +70,7 @@ if y_pred == 1:
     st.image(goodwatermelon,width=705)
     st.markdown("<center>🍉🍉🍉这瓜甚甜，买一个🍉🍉🍉</center>", unsafe_allow_html=True)
 else:
-    st.image("./pics/bad.gif",
+    st.image("https://my-wechat.oss-cn-beijing.aliyuncs.com/bad_20211209224737.gif",
     width=705, 
 )
     st.markdown('<center>🔪🔪🔪这瓜不甜，买不得🔪🔪🔪</center>', unsafe_allow_html=True)

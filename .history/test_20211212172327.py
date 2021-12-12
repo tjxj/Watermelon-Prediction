@@ -30,7 +30,7 @@ plot_step = 0.02
 
 # Load data
 df = dataPreprocessing()
-plt.figure(figsize=(8,4))
+
 for pairidx, pair in enumerate([[1, 0], [1, 3], [1, 4], [1, 5],
  [3, 0], [3, 2], [3, 4], [3, 5]]):
     # We only take the two corresponding features
@@ -75,7 +75,7 @@ plt.axis("tight")
 plt.tight_layout()
 st.pyplot()
 
-st.image("./pics/bad.gif") 
+
 # sio = BytesIO()
 # plt.savefig(sio, format='png', bbox_inches='tight', pad_inches=0.0)
 # data = base64.encodebytes(sio.getvalue()).decode()
