@@ -82,9 +82,9 @@ else:
 
 
 
-#     st.image("./pics/bad.gif",
-#     width=705, 
-# )
+    st.image("./pics/bad.gif",
+    width=705, 
+)
     st.markdown('<center>🔪🔪🔪这瓜不甜，买不得🔪🔪🔪</center>', unsafe_allow_html=True)
 # 
 st.markdown("---")
